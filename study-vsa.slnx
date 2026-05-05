@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SuperTodo.API/SuperTodo.API.csproj" />
+  </Folder>
+</Solution>
