@@ -2,4 +2,7 @@
   <Folder Name="/src/">
     <Project Path="src/SuperTodo.API/SuperTodo.API.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/SuperTodo.UnitTests/SuperTodo.UnitTests.csproj" />
+  </Folder>
 </Solution>

@@ -2,6 +2,16 @@
 
 Esse projeto surgiu como uma ideia de refatorar outro projeto que usava outra arquitetura (Clean Arch https://github.com/casamassa/study-arch-clean-ddd), assim ficou mais fácil de assimilar a diferença entre as 2 arquiteturas.
 
+Um Sistema de Gestão de Tarefas (Todo List) com Prioridades.
+
+## O Cenário: "Super ToDo"
+
+Não é apenas um "check/uncheck". Contém uma regra de negócio:
+
+1.  Uma tarefa tem Título, Descrição e Prioridade (Alta, Média, Baixa).
+2.  Regra de Negócio (DDD): Uma tarefa com prioridade "Alta" não pode ser criada sem uma "Descrição".
+3.  Ação (Application): Ao concluir uma tarefa, o sistema deve registrar a data de conclusão e, se for "Alta", enviar um log (simulando um e-mail).
+
 Mudando a mentalidade: em vez de organizar o código como no Clean Arch por "o que a classe é" (Repositório, Serviço, Controller), organiza-se por "o que o sistema faz" (Criar Tarefa, Concluir Tarefa). No VSA, cada funcionalidade é uma fatia vertical completa. Se uma fatia precisar de banco de dados e a outra não, elas são independentes.
 
 ## Por que VSA é melhor que a Clean Arch?
@@ -41,6 +51,31 @@ A escolha padrão para VSA é manter tudo em um único projeto de API.
 
 - Por que? Porque o isolamento não é feito por "projetos", mas sim por Pastas. Se você precisar trocar a API por outra coisa no futuro, você move as pastas de Features.
 - Exceção: Se você tem regras de negócio que realmente precisam ser compartilhadas com outros sistemas (como um App Mobile e um Worker), aí você cria um projeto de Domain separado. Caso contrário, mantenha no projeto da API.
+
+## Como executar:
+
+1. No terminal, entre na pasta da API:
+
+```bash
+cd SuperTodo.API
+```
+
+2. Execute:
+
+```bash
+dotnet run
+```
+
+3. Abra o navegador no endereço do Swagger (geralmente http://localhost:5xxx/swagger).
+4. Tente criar uma tarefa com Prioridade 2 (Alta) e sem descrição. Veja o erro acontecer!
+
+## Como testar (testes unitários):
+
+1. No terminal a partir da pasta raiz e execute:
+
+```bash
+dotnet test
+```
 
 ### VSA usa DDD?
 
