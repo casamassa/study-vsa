@@ -1,4 +1,4 @@
-# Estudo do Vertical Slice Arch (VSA)
+# Estudo do Vertical Slice Arch (VSA) + Mediator + SOLID (DI/IoC) + DevOps (CI/CD)
 
 Esse projeto surgiu como uma ideia de refatorar outro projeto que usava outra arquitetura (Clean Arch https://github.com/casamassa/study-arch-clean-ddd), assim ficou mais fácil de assimilar a diferença entre as 2 arquiteturas.
 
